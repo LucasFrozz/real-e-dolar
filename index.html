@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rakkas&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>REAL E DÓLAR</title>
+</head>
+<body>
+
+    <main>
+
+        <div class="container">
+
+            <label for="realInput">VALOR EM REAL:</label>
+            <input type="numero" id="realInput">
+            <button onclick="converter()">DESCOBRIR</button>
+            <p id="resultado">Está precisando converter seu dinheiro?</p>
+
+            <img src="https://media2.giphy.com/media/v1.Y2lkPTc5MGI3NjExMzBlcTZnOGllM3BpeDdqcWp6YWo3MzVkc3o1Mng4Y3c2emc1a2J0eSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/111wy4fihDzdIBrv0t/giphy.gif"
+                alt="">
+        </div>
+        <input type="checkbox" name="#" id="toggle" class="toggle-btn">
+        <label for="toggle" class="toggle-label"></label>
+
+    </main>
+
+
+    <script>
+        function converter() {
+            var valorReal = document.getElementById("realInput").value;
+            var taxaConversao = 0.20;
+            var valorDolar = valorReal * taxaConversao;
+            document.getElementById("resultado").innerHTML = "VALOR EM DÓLAR: " + valorDolar.toFixed(2);
+        }
+
+
+        const toggleBtn = document.getElementById('toggle');
+        const body = document.body;
+
+        toggleBtn.addEventListener('click', function () {
+            body.classList.toggle('dark-mode')
+
+        })
+
+
+
+    </script>
+
+</body>
+
+</html>
